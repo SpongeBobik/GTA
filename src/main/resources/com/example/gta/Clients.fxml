@@ -8,9 +8,9 @@
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0">
          <children>
-            <TableView fx:id="tableClients" layoutX="93.0" layoutY="61.0" prefHeight="241.0" prefWidth="381.0" />
+            <TableView fx:id="tableClients" layoutX="93.0" layoutY="61.0" onMouseClicked="#getcell" prefHeight="241.0" prefWidth="381.0" />
             <Button fx:id="bttAddClient" layoutX="490.0" layoutY="61.0" mnemonicParsing="false" onAction="#addClient" text="Добавить" />
-            <Button layoutX="490.0" layoutY="100.0" mnemonicParsing="false" text="Button" />
+            <Button fx:id="bttDeleteClient" layoutX="490.0" layoutY="100.0" mnemonicParsing="false" onAction="#DeleteClient" text="Удалить" />
             <Button layoutX="490.0" layoutY="140.0" mnemonicParsing="false" text="Button" />
             <Button fx:id="bttClientsBack" layoutX="490.0" layoutY="335.0" mnemonicParsing="false" onAction="#Back" prefHeight="25.0" prefWidth="81.0" text="Назад" />
          </children>

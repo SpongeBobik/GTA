@@ -2,8 +2,12 @@ package com.example.gta;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -21,6 +25,15 @@ public class AddClientController {
     String GetValue;
     @FXML
     private ComboBox<?> comboStatus;
+    @FXML
+    private TextField txtBoxNameClient;
+    @FXML
+    private TextField txtBoxPhoneClient;
+    @FXML
+    private TextField txtBoxMailClient;
+    @FXML
+    private Button bttAddClient;
+
 
     @FXML
     void initialize(){
@@ -64,4 +77,22 @@ public class AddClientController {
             throwables.printStackTrace();
         }
     }
+    public void buttonAdd(ActionEvent actionEvent){
+        GetValue = String.valueOf(stat_list.indexOf(stat_list.get(Integer.parseInt(GetValue))));
+        String idStatus = id_list.get(Integer.parseInt(str));
+
+
+        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov")) {
+            Statement statement = con.createStatement();
+            int row = statement.executeUpdate("INSERT INTO \"Clients\"(\"FIO\", \"Phone\", \"e_mail\", \"Status\") VALUES ('" + txtBoxNameClient.getText() + "','" + txtBoxPhoneClient.getText() + "','" + txtBoxMailClient.getText() + "','" + idStatus + "')");
+        }catch(SQLException throwables){
+            throwables.printStackTrace();
+        }
+
+        Stage stage = (Stage) bttAddClient.getScene().getWindow();
+        stage.close();
+
+    }
+
+
 }

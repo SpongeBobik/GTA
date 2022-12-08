@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
@@ -24,6 +25,8 @@ import java.sql.ResultSet;
 public class ClientsController {
 
     Stage window;
+    DataSingelton dataS = DataSingelton.getInstance();
+
     @FXML
     private TableView<ObservableList> tableClients;
     @FXML
@@ -86,4 +89,47 @@ public class ClientsController {
         }
 
     }
+
+    public void DeleteClient(ActionEvent actionEvent) {
+        try{
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("DeleteClient.fxml"));
+            stage.setScene(new Scene(root));
+            stage.setTitle("Удаление записи");
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(((Node)actionEvent.getSource()).getScene().getWindow());
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getcell(MouseEvent mouseEvent){
+        ObservableList nom = tableClients.getSelectionModel().getSelectedItem();
+        dataS.setIdClient(nom.get(0).toString());
+
+
+        EditDelete.idClient = Integer.parseInt(nom.get(0).toString());
+        EditDelete.FioClient = nom.get(1).toString();
+        EditDelete.e_mailClient = nom.get(2).toString();
+        EditDelete.PhoneClient = nom.get(3).toString();
+        EditDelete.Status = nom.get(4).toString();
+
+
+//        System.out.println(EditDelete.idClient);
+//        System.out.println(EditDelete.FioClient);
+//        System.out.println(EditDelete.e_mailClient);
+//        System.out.println(EditDelete.PhoneClient);
+//        System.out.println(EditDelete.Status);
+
+    }
 }
+
+
+
+
+
+
+
+
