@@ -13,12 +13,12 @@
             <TableView fx:id="tableServices" layoutX="50.0" layoutY="46.0" onMouseClicked="#getcell" prefHeight="241.0" prefWidth="382.0" stylesheets="@main.css" />
             <Pane layoutX="490.0" prefHeight="400.0" prefWidth="110.0" style="-fx-background-color: black;">
                <children>
-                  <Button fx:id="bttAddServ" layoutX="15.0" layoutY="82.0" mnemonicParsing="false" text="Добавить" textFill="#9df8ff">
+                  <Button fx:id="bttAddServ" layoutX="15.0" layoutY="82.0" mnemonicParsing="false" onAction="#addService" text="Добавить" textFill="#9df8ff">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bttDeleteServ" layoutX="19.0" layoutY="118.0" mnemonicParsing="false" text="Удалить" textFill="#9df8ff">
+                  <Button fx:id="bttDeleteServ" layoutX="19.0" layoutY="118.0" mnemonicParsing="false" onAction="#DeleteService" text="Удалить" textFill="#9df8ff">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="291.0" prefWidth="507.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.addServiceController">
+   <children>
+      <Pane layoutX="-4.0" prefHeight="86.0" prefWidth="514.0" styleClass="pane" stylesheets="@main.css">
+         <children>
+            <TextField fx:id="txtboxNameServ" layoutX="21.0" layoutY="31.0" prefHeight="35.0" prefWidth="252.0" promptText="Название абонимента" />
+         </children>
+      </Pane>
+      <ChoiceBox fx:id="chboxFight" layoutX="340.0" layoutY="109.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="chboxPool" layoutX="179.0" layoutY="109.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="chboxMassage" layoutX="14.0" layoutY="163.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="chboxSpa" layoutX="177.0" layoutY="163.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="chboxGroup" layoutX="14.0" layoutY="109.0" prefWidth="150.0" />
+      <Label layoutX="190.0" layoutY="92.0" text="Бассейн" />
+      <Label layoutX="23.0" layoutY="92.0" text="Групповые занятия" />
+      <Label layoutX="346.0" layoutY="92.0" text="Единоборства" />
+      <Label layoutX="23.0" layoutY="146.0" text="Массаж" />
+      <Label layoutX="190.0" layoutY="146.0" text="Спа" />
+      <Button fx:id="addService" layoutX="277.0" layoutY="226.0" mnemonicParsing="false" onAction="#buttonAdd" text="Добавить" />
+      <Button layoutX="121.0" layoutY="226.0" mnemonicParsing="false" text="Отмена" />
+   </children>
+</AnchorPane>

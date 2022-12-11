@@ -22,19 +22,15 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 
-public class ServicesController {
+public class SaleController {
     Stage window;
-
-    @FXML
-    private TableView<ObservableList> tableServices;
-
-    private ObservableList<ObservableList> data;
     DataSingelton dataS = DataSingelton.getInstance();
-
-
-
     @FXML
-    private Button bttServBack;
+    private TableView<ObservableList> tableSale_Serv;
+    private ObservableList<ObservableList> data;
+    @FXML
+    private Button bttSaleBack;
+
 
     @FXML
     protected void initialize(){
@@ -42,7 +38,7 @@ public class ServicesController {
         data = FXCollections.observableArrayList();
         try{
             c = DBConnect.connect();
-            ResultSet rs = c.createStatement().executeQuery("SELECT * from \"Services\"");
+            ResultSet rs = c.createStatement().executeQuery("SELECT * from \"Sale_Services\"");
             for(int i = 0; i<rs.getMetaData().getColumnCount(); i++){
                 final int j = i;
                 TableColumn col = new TableColumn(rs.getMetaData().getColumnName(i + 1));
@@ -51,7 +47,7 @@ public class ServicesController {
                         return new SimpleStringProperty(param.getValue().get(j).toString());
                     }
                 });
-                tableServices.getColumns().addAll(col);
+                tableSale_Serv.getColumns().addAll(col);
             }
             while (rs.next()){
                 ObservableList<String> row = FXCollections.observableArrayList();
@@ -60,7 +56,7 @@ public class ServicesController {
                 }
                 data.add(row);
             }
-            tableServices.setItems(data);
+            tableSale_Serv.setItems(data);
         }catch (Exception e){
             e.printStackTrace();
             System.out.println("Error on Building Data");
@@ -69,22 +65,11 @@ public class ServicesController {
 
     }
 
-
-
-
-
     @FXML
-    protected void Back() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
-        window = (Stage) bttServBack.getScene().getWindow();
-        window.setScene(new Scene(root));
-    }
-
-    @FXML
-    protected void addService(ActionEvent actionEvent) throws IOException{
+    protected void addSale(ActionEvent actionEvent) throws IOException{
         try{
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("addServise.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("addSale.fxml"));
             stage.setScene(new Scene(root));
             stage.setTitle("Добавление новой записи");
             stage.initModality(Modality.WINDOW_MODAL);
@@ -97,10 +82,10 @@ public class ServicesController {
 
     }
 
-    public void DeleteService(ActionEvent actionEvent) {
+    public void DeleteSale(ActionEvent actionEvent) {
         try{
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("DeleteService.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("DeleteSale.fxml"));
             stage.setScene(new Scene(root));
             stage.setTitle("Удаление записи");
             stage.initModality(Modality.WINDOW_MODAL);
@@ -112,26 +97,35 @@ public class ServicesController {
         }
     }
 
+
+
+    @FXML
+    protected void Back() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        window = (Stage) bttSaleBack.getScene().getWindow();
+        window.setScene(new Scene(root));
+    }
+
     public void getcell(MouseEvent mouseEvent){
-        ObservableList nom = tableServices.getSelectionModel().getSelectedItem();
+        ObservableList nom = tableSale_Serv.getSelectionModel().getSelectedItem();
         dataS.setIdClient(nom.get(0).toString());
 
-        EditDelete.ID_Service = Integer.parseInt(nom.get(0).toString());
-        EditDelete.Name_Service = nom.get(1).toString();
-        EditDelete.Group_Lessons = nom.get(2).toString();
-        EditDelete.Pool = nom.get(3).toString();
-        EditDelete.Fight_lessons = nom.get(4).toString();
-        EditDelete.Massage = nom.get(5).toString();
-        EditDelete.Spa = nom.get(6).toString();
 
+        EditDelete.ID_Card = Integer.parseInt(nom.get(0).toString());
+        EditDelete.Service_ID = Integer.parseInt(nom.get(1).toString());
+        EditDelete.Duration = nom.get(2).toString();
+        EditDelete.Client_ID = Integer.parseInt(nom.get(3).toString());
+        EditDelete.Col_Visits = nom.get(4).toString();
+        EditDelete.Cost = nom.get(5).toString();
 
-        System.out.println(EditDelete.ID_Service);
-        System.out.println(EditDelete.Name_Service);
-        System.out.println(EditDelete.Group_Lessons);
-        System.out.println(EditDelete.Pool);
-        System.out.println(EditDelete.Fight_lessons);
-        System.out.println(EditDelete.Massage);
-        System.out.println(EditDelete.Spa);
+//
+//        System.out.println(EditDelete.ID_Card);
+//        System.out.println(EditDelete.Service_ID);
+//        System.out.println(EditDelete.Duration);
+//        System.out.println(EditDelete.Client_ID);
+//        System.out.println(EditDelete.Col_Visits);
+//        System.out.println(EditDelete.Cost);
 
     }
+
 }

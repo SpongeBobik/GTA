@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="235.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.AddSaleController">
+   <children>
+      <Pane prefHeight="95.0" prefWidth="505.0" styleClass="pane" stylesheets="@main.css">
+         <children>
+            <TextField fx:id="txtboxClient" layoutX="14.0" layoutY="35.0" promptText="ID клиента" />
+            <TextField fx:id="txtboxService" layoutX="342.0" layoutY="35.0" promptText="ID Абонимента" />
+         </children>
+      </Pane>
+      <TextField fx:id="txtboxDur" layoutX="14.0" layoutY="111.0" promptText="Продолжительность" />
+      <TextField fx:id="txtboxCol" layoutX="184.0" layoutY="111.0" promptText="Дней в неделю" />
+      <TextField fx:id="txtboxCost" layoutX="349.0" layoutY="111.0" promptText="Стоимость" />
+      <Button fx:id="Back" layoutX="137.0" layoutY="170.0" mnemonicParsing="false" onAction="#back" text="Отмена" />
+      <Button fx:id="bttAddSale" layoutX="307.0" layoutY="170.0" mnemonicParsing="false" onAction="#addSale" text="Добавить" />
+   </children>
+</AnchorPane>

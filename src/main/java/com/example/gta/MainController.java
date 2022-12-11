@@ -18,6 +18,9 @@ public class MainController {
     private  Button ButtonServices;
 
     @FXML
+    private Button ButtonSaleServ;
+
+    @FXML
     protected void buttonClients() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Clients.fxml"));
         window = (Stage) ButtonClients.getScene().getWindow();
@@ -31,15 +34,11 @@ public class MainController {
         window.setScene(new Scene(root));
     }
 
-//@FXML
-//private Button id_nomenclature;
-
-//       @FXML
-//    protected void buttonNomenclature() throws IOException{
-//        Parent root = FXMLLoader.load(getClass().getResource("nomenclaturePage.fxml"));
-//        window = (Stage) id_nomenclature.getScene().getWindow();
-//        window.setScene(new Scene(root));
-//    }
-
+    @FXML
+    protected void buttonSale() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Sale.fxml"));
+        window = (Stage) ButtonServices.getScene().getWindow();
+        window.setScene(new Scene(root));
+    }
 
 }

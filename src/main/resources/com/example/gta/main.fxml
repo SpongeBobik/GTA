@@ -12,7 +12,7 @@
                <font>
                   <Font name="System Bold" size="22.0" />
                </font></Button>
-                <Button fx:id="ButtonSaleServ" layoutX="80.0" layoutY="222.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="269.0" text="Продажа услуг" textFill="#a3c7d4">
+                <Button fx:id="ButtonSaleServ" layoutX="80.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonSale" prefHeight="26.0" prefWidth="269.0" text="Продажа услуг" textFill="#a3c7d4">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font></Button>
