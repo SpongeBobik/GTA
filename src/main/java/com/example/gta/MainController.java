@@ -15,9 +15,19 @@ public class MainController {
     private Button ButtonClients;
 
     @FXML
+    private  Button ButtonServices;
+
+    @FXML
     protected void buttonClients() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Clients.fxml"));
         window = (Stage) ButtonClients.getScene().getWindow();
+        window.setScene(new Scene(root));
+    }
+
+    @FXML
+    protected void buttonServices() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Services.fxml"));
+        window = (Stage) ButtonServices.getScene().getWindow();
         window.setScene(new Scene(root));
     }
 

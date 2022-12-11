@@ -2,17 +2,29 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.MainController">
     <children>
-        <AnchorPane prefHeight="410.0" prefWidth="610.0">
+        <AnchorPane prefHeight="410.0" prefWidth="610.0" styleClass="background" stylesheets="@main.css">
             <children>
-                <Button fx:id="ButtonClients" layoutX="112.0" layoutY="148.0" mnemonicParsing="false" onAction="#buttonClients" prefHeight="26.0" prefWidth="269.0" text="Клиенты" />
-                <Button fx:id="ButtonSaleServ" layoutX="112.0" layoutY="231.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="269.0" text="Продажа услуг" />
-                <Button fx:id="ButtonServices" layoutX="112.0" layoutY="188.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="269.0" text="Услуги" />
-                <Button fx:id="ButtonVisits" layoutX="112.0" layoutY="276.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="269.0" text="Журнал посещений" />
+                <Button fx:id="ButtonClients" layoutX="47.0" layoutY="130.0" mnemonicParsing="false" onAction="#buttonClients" prefHeight="26.0" prefWidth="269.0" stylesheets="@main.css" text="Клиенты" textFill="#a3c7d4">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Button>
+                <Button fx:id="ButtonSaleServ" layoutX="80.0" layoutY="222.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="269.0" text="Продажа услуг" textFill="#a3c7d4">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Button>
+                <Button fx:id="ButtonServices" layoutX="36.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonServices" prefHeight="26.0" prefWidth="269.0" text="Услуги" textFill="#a3c7d4">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Button>
+                <Button fx:id="ButtonVisits" layoutX="107.0" layoutY="268.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="269.0" text="Журнал посещений" textFill="#a3c7d4">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Button>
             </children>
         </AnchorPane>
     </children>
 </AnchorPane>
-
