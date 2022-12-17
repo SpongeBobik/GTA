@@ -28,7 +28,7 @@
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bttChangeClient" layoutX="22.0" layoutY="164.0" mnemonicParsing="false" text="Изменить" textFill="#b3f3f5">
+                  <Button fx:id="bttChangeClient" layoutX="22.0" layoutY="164.0" mnemonicParsing="false" onAction="#UpdateClient" text="Изменить" textFill="#b3f3f5">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>

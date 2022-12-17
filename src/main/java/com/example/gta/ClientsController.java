@@ -110,6 +110,23 @@ public class ClientsController {
         }
     }
 
+    @FXML
+    protected void UpdateClient(ActionEvent actionEvent) throws IOException{
+        try{
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("UpdateClients.fxml"));
+            stage.setScene(new Scene(root));
+            stage.setTitle("Изменение новой записи");
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(((Node)actionEvent.getSource()).getScene().getWindow());
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void getcell(MouseEvent mouseEvent){
         ObservableList nom = tableClients.getSelectionModel().getSelectedItem();
         dataS.setIdClient(nom.get(0).toString());

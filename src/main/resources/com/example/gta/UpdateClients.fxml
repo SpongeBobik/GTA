@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.AddClientController">
+<AnchorPane prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.UpdateClientController">
    <children>
       <TextField fx:id="txtBoxPhoneClient" layoutX="31.0" layoutY="148.0" promptText="Номер телефона" />
       <TextField fx:id="txtBoxMailClient" layoutX="31.0" layoutY="92.0" prefHeight="33.0" prefWidth="337.0" promptText="e-mail@yandex.ru" />
-      <Button fx:id="bttAddClient" layoutX="164.0" layoutY="194.0" mnemonicParsing="false" onAction="#buttonAdd" prefWidth="71.0" text="Добавить" />
-      <ComboBox fx:id="comboStatus" layoutX="218.0" layoutY="148.0" prefWidth="150.0" promptText="Статус" />
+      <Button fx:id="bttUpdate" layoutX="164.0" layoutY="194.0" mnemonicParsing="false" onAction="#buttonUpdate" prefWidth="71.0" text="Добавить" />
       <Pane layoutY="-2.0" prefHeight="79.0" prefWidth="400.0" styleClass="pane" stylesheets="@main.css">
          <children>
             <TextField fx:id="txtBoxNameClient" layoutX="32.0" layoutY="23.0" prefHeight="33.0" prefWidth="337.0" promptText="Имя клиента" />
          </children>
       </Pane>
+      <ChoiceBox fx:id="chboxStatus" layoutX="218.0" layoutY="148.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
