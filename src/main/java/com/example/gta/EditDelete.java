@@ -31,6 +31,8 @@ public class EditDelete {
     public static int Card_ID;
     public static String Data;
 
+    /////////Visits\\\\\\\\\\
+    public static String Password;
 
 
 }

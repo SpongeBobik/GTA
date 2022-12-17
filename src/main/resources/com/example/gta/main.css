@@ -32,3 +32,13 @@
 .pane1{
 -fx-background-color: rgba(98 ,172 ,245 ,1)
 }
+.pane2{
+-fx-background-color: rgba(192 ,90 ,215 ,1)
+}
+.vstupitelnaya_stranitsa{
+-fx-background-image: url(fon3.jpg);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+
+}
