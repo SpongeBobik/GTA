@@ -149,10 +149,10 @@ public class VisitsController {
         EditDelete.ID_Visit = Integer.parseInt(nom.get(0).toString());
         EditDelete.Card_ID = Integer.parseInt(nom.get(1).toString());
         EditDelete.Data = nom.get(2).toString();
-
-        System.out.println(EditDelete.ID_Visit);
-        System.out.println(EditDelete.Card_ID);
-        System.out.println(EditDelete.Data);
+//
+//        System.out.println(EditDelete.ID_Visit);
+//        System.out.println(EditDelete.Card_ID);
+//        System.out.println(EditDelete.Data);
 
     }
 

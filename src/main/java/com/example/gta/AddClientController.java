@@ -60,7 +60,7 @@ public class AddClientController {
 
                 stat_list.indexOf(stat_list);
 
-                System.out.println("Выбранный элемент " + listStat.get(0));
+//                System.out.println("Выбранный элемент " + listStat.get(0));
                 comboStatus.getItems().addAll(listStat);
                 comboStatus.getSelectionModel().select(0);
 
@@ -69,8 +69,8 @@ public class AddClientController {
                 str = String.valueOf(stat_list.indexOf(stat_list.get(Integer.parseInt(GetValue))));
 
             }
-            System.out.println(stat_list.get(0));
-            System.out.println(id_list.get(Integer.parseInt(str)));
+//            System.out.println(stat_list.get(0));
+//            System.out.println(id_list.get(Integer.parseInt(str)));
 
 
         }catch (SQLException throwables) {
