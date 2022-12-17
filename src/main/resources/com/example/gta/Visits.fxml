@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.VisitsController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="background1" stylesheets="@main.css">
+         <children>
+            <TableView fx:id="tableSales" layoutX="42.0" layoutY="56.0" onMouseClicked="#getcell" prefHeight="337.0" prefWidth="385.0" stylesheets="@main.css" />
+            <Pane layoutX="858.0" prefHeight="600.0" prefWidth="144.0" style="-fx-background-color: black;">
+               <children>
+                  <Button fx:id="bttAddVisit" layoutX="15.0" layoutY="82.0" mnemonicParsing="false" onAction="#addVisit" text="Добавить" textFill="#b3f3f5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bttDeleteVisit" layoutX="19.0" layoutY="118.0" mnemonicParsing="false" onAction="#DeleteVisit" text="Удалить" textFill="#b3f3f5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bttChangeVisit" layoutX="14.0" layoutY="151.0" mnemonicParsing="false" text="Изменить" textFill="#b3f3f5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bttVisitsBack" layoutX="26.0" layoutY="533.0" mnemonicParsing="false" onAction="#Back" prefHeight="44.0" prefWidth="99.0" text="Назад" textFill="#b3f3f5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="UpdateVisits" layoutX="16.0" layoutY="250.0" mnemonicParsing="false" onAction="#UpdateVisitsTable" text="Обновить" textFill="#b1fff6e5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <TableView fx:id="tableVisits" layoutX="474.0" layoutY="54.0" onMouseClicked="#getcell" prefHeight="336.0" prefWidth="221.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

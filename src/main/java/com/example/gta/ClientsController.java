@@ -36,6 +36,18 @@ public class ClientsController {
     private ObservableList<ObservableList> data;
     @FXML
     protected void initialize(){
+        UpdateClientsTable();
+
+    }
+    @FXML
+    protected void Back() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        window = (Stage) bttClientsBack.getScene().getWindow();
+        window.setScene(new Scene(root));
+    }
+
+    public void UpdateClientsTable(){
+
         Connection c;
         data = FXCollections.observableArrayList();
         try{
@@ -64,13 +76,6 @@ public class ClientsController {
             System.out.println("Error on Building Data");
         }
 
-
-    }
-    @FXML
-    protected void Back() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
-        window = (Stage) bttClientsBack.getScene().getWindow();
-        window.setScene(new Scene(root));
     }
 
     @FXML

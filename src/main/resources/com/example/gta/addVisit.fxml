@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="154.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.AddVisitController">
+   <children>
+      <Pane layoutY="-2.0" prefHeight="93.0" prefWidth="345.0" styleClass="pane" stylesheets="@main.css">
+         <children>
+            <TextField fx:id="txtCard" layoutX="14.0" layoutY="34.0" promptText="Hомер карты" />
+            <TextField fx:id="txtData" layoutX="182.0" layoutY="34.0" promptText="Дата/время" />
+         </children>
+      </Pane>
+      <Button fx:id="bttAddVisit" layoutX="138.0" layoutY="103.0" mnemonicParsing="false" onAction="#addVisit" text="Добавить" />
+   </children>
+</AnchorPane>

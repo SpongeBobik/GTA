@@ -26,8 +26,11 @@ public class EditDelete {
     public static String Col_Visits;
     public static String Cost;
 
-    /////////Client\\\\\\\\\\
+    /////////Visits\\\\\\\\\\
+    public static int ID_Visit;
+    public static int Card_ID;
+    public static String Data;
 
-    /////////Client\\\\\\\\\\
+
 
 }

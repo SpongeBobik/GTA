@@ -28,15 +28,25 @@ public class SaleController {
     @FXML
     private TableView<ObservableList> tableSale_Serv;
     private ObservableList<ObservableList> data;
+    private ObservableList<ObservableList> dataSer;
     @FXML
     private Button bttSaleBack;
+
+    @FXML
+    private  TableView<ObservableList> tableServices;
 
 
     @FXML
     protected void initialize(){
-        Connection c;
+        UpdateSalesTable();
+        UpdateServTable();
+
+    }
+
+    public void UpdateSalesTable(){
         data = FXCollections.observableArrayList();
         try{
+            Connection c;
             c = DBConnect.connect();
             ResultSet rs = c.createStatement().executeQuery("SELECT * from \"Sale_Services\"");
             for(int i = 0; i<rs.getMetaData().getColumnCount(); i++){
@@ -61,8 +71,36 @@ public class SaleController {
             e.printStackTrace();
             System.out.println("Error on Building Data");
         }
+    }
 
-
+    public void UpdateServTable(){
+        dataSer = FXCollections.observableArrayList();
+        try{
+            Connection c;
+            c = DBConnect.connect();
+            ResultSet rs = c.createStatement().executeQuery("SELECT * from \"Services\"");
+            for(int i = 0; i<rs.getMetaData().getColumnCount(); i++){
+                final int j = i;
+                TableColumn col = new TableColumn(rs.getMetaData().getColumnName(i + 1));
+                col.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<ObservableList, String>, ObservableValue<String>>() {
+                    public ObservableValue<String> call(TableColumn.CellDataFeatures<ObservableList, String> param) {
+                        return new SimpleStringProperty(param.getValue().get(j).toString());
+                    }
+                });
+                tableServices.getColumns().addAll(col);
+            }
+            while (rs.next()){
+                ObservableList<String> row = FXCollections.observableArrayList();
+                for (int i = 1; i <=rs.getMetaData().getColumnCount(); i++){
+                    row.add(rs.getString(i));
+                }
+                dataSer.add(row);
+            }
+            tableServices.setItems(dataSer);
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("Error on Building Data");
+        }
     }
 
     @FXML

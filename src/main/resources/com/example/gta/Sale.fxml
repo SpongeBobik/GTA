@@ -6,35 +6,41 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.SaleController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.SaleController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background1" stylesheets="@main.css">
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="background1" stylesheets="@main.css">
          <children>
-            <TableView fx:id="tableSale_Serv" layoutX="50.0" layoutY="46.0" onMouseClicked="#getcell" prefHeight="241.0" prefWidth="382.0" stylesheets="@main.css" />
-            <Pane layoutX="490.0" onDragDetected="#addSale" prefHeight="400.0" prefWidth="110.0" style="-fx-background-color: black;">
+            <TableView fx:id="tableSale_Serv" layoutX="237.0" layoutY="45.0" onMouseClicked="#getcell" prefHeight="241.0" prefWidth="384.0" stylesheets="@main.css" />
+            <Pane layoutX="858.0" onDragDetected="#addSale" prefHeight="600.0" prefWidth="144.0" style="-fx-background-color: black;">
                <children>
-                  <Button fx:id="bttAddSale" layoutX="15.0" layoutY="82.0" mnemonicParsing="false" onAction="#addSale" text="Добавить" textFill="#9df8ff">
+                  <Button fx:id="bttAddSale" layoutX="15.0" layoutY="82.0" mnemonicParsing="false" onAction="#addSale" text="Добавить" textFill="#b3f3f5">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bttDeleteSale" layoutX="19.0" layoutY="118.0" mnemonicParsing="false" onAction="#DeleteSale" text="Удалить" textFill="#9df8ff">
+                  <Button fx:id="bttDeleteSale" layoutX="19.0" layoutY="118.0" mnemonicParsing="false" onAction="#DeleteSale" text="Удалить" textFill="#b3f3f5">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bttChangeSale" layoutX="14.0" layoutY="151.0" mnemonicParsing="false" text="Изменить" textFill="#9df8ff">
+                  <Button fx:id="bttChangeSale" layoutX="14.0" layoutY="151.0" mnemonicParsing="false" text="Изменить" textFill="#b3f3f5">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bttSaleBack" layoutX="15.0" layoutY="359.0" mnemonicParsing="false" onAction="#Back" prefHeight="25.0" prefWidth="81.0" text="Назад" textFill="#9df8ff">
+                  <Button fx:id="bttSaleBack" layoutX="26.0" layoutY="533.0" mnemonicParsing="false" onAction="#Back" prefHeight="44.0" prefWidth="99.0" text="Назад" textFill="#b3f3f5">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="UpdateSale" layoutX="16.0" layoutY="250.0" mnemonicParsing="false" onAction="#UpdateSalesTable" text="Обновить" textFill="#b1fff6e5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
                </children>
             </Pane>
+            <TableView fx:id="tableServices" layoutX="123.0" layoutY="336.0" prefHeight="200.0" prefWidth="605.0" />
          </children>
       </AnchorPane>
    </children>

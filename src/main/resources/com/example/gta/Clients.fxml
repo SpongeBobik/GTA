@@ -6,31 +6,36 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.ClientsController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.ClientsController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background1" stylesheets="@main.css">
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="background1" stylesheets="@main.css">
          <children>
-            <TableView fx:id="tableClients" layoutX="51.0" layoutY="45.0" onMouseClicked="#getcell" prefHeight="241.0" prefWidth="381.0" stylesheets="@main.css" />
-            <Pane layoutX="490.0" prefHeight="400.0" prefWidth="110.0" style="-fx-background-color: black;">
+            <TableView fx:id="tableClients" layoutX="163.0" layoutY="96.0" onMouseClicked="#getcell" prefHeight="268.0" prefWidth="492.0" stylesheets="@main.css" />
+            <Pane layoutX="830.0" layoutY="-3.0" prefHeight="602.0" prefWidth="170.0" style="-fx-background-color: black;">
                <children>
-                  <Button fx:id="bttAddClient" layoutX="16.0" layoutY="80.0" mnemonicParsing="false" onAction="#addClient" text="Добавить" textFill="#9df8ff">
+                  <Button fx:id="bttAddClient" layoutX="16.0" layoutY="56.0" mnemonicParsing="false" onAction="#addClient" prefHeight="51.0" prefWidth="127.0" text="Добавить" textFill="#b3f3f5f7">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bttDeleteClient" layoutX="20.0" layoutY="118.0" mnemonicParsing="false" onAction="#DeleteClient" text="Удалить" textFill="#9df8ff">
+                  <Button fx:id="bttDeleteClient" layoutX="25.0" layoutY="112.0" mnemonicParsing="false" onAction="#DeleteClient" text="Удалить" textFill="#b3f3f5">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bttClientsBack" layoutX="15.0" layoutY="352.0" mnemonicParsing="false" onAction="#Back" prefHeight="25.0" prefWidth="81.0" text="Назад" textFill="#9df8ff">
+                  <Button fx:id="bttClientsBack" layoutX="23.0" layoutY="536.0" mnemonicParsing="false" onAction="#Back" prefHeight="44.0" prefWidth="114.0" text="Назад" textFill="#b3f3f5">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bttChangeClient" layoutX="15.0" layoutY="152.0" mnemonicParsing="false" text="Изменить" textFill="#9df8ff">
+                  <Button fx:id="bttChangeClient" layoutX="22.0" layoutY="164.0" mnemonicParsing="false" text="Изменить" textFill="#b3f3f5">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="UpdateClients" layoutX="21.0" layoutY="259.0" mnemonicParsing="false" onAction="#UpdateClientsTable" text="Обновить" textFill="#b1fff6e5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
                </children>

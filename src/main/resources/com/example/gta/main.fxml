@@ -4,25 +4,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.MainController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gta.MainController">
     <children>
-        <AnchorPane prefHeight="410.0" prefWidth="610.0" styleClass="background" stylesheets="@main.css">
+        <AnchorPane layoutY="-2.0" prefHeight="616.0" prefWidth="1000.0" styleClass="background" stylesheets="@main.css">
             <children>
-                <Button fx:id="ButtonClients" layoutX="47.0" layoutY="130.0" mnemonicParsing="false" onAction="#buttonClients" prefHeight="26.0" prefWidth="269.0" stylesheets="@main.css" text="Клиенты" textFill="#a3c7d4">
+                <Button fx:id="ButtonClients" layoutX="62.0" layoutY="136.0" mnemonicParsing="false" onAction="#buttonClients" prefHeight="75.0" prefWidth="333.0" stylesheets="@main.css" text="Клиенты" textFill="#a3c7d4">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="System Bold" size="39.0" />
                </font></Button>
-                <Button fx:id="ButtonSaleServ" layoutX="80.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonSale" prefHeight="26.0" prefWidth="269.0" text="Продажа услуг" textFill="#a3c7d4">
+                <Button fx:id="ButtonSaleServ" layoutX="106.0" layoutY="268.0" mnemonicParsing="false" onAction="#buttonSale" prefHeight="82.0" prefWidth="362.0" text="Продажа услуг" textFill="#a3c7d4">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="System Bold" size="39.0" />
                </font></Button>
-                <Button fx:id="ButtonServices" layoutX="36.0" layoutY="176.0" mnemonicParsing="false" onAction="#buttonServices" prefHeight="26.0" prefWidth="269.0" text="Услуги" textFill="#a3c7d4">
+                <Button fx:id="ButtonServices" layoutX="71.0" layoutY="203.0" mnemonicParsing="false" onAction="#buttonServices" prefHeight="26.0" prefWidth="269.0" text="Услуги" textFill="#a3c7d4">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="System Bold" size="39.0" />
                </font></Button>
-                <Button fx:id="ButtonVisits" layoutX="107.0" layoutY="268.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="269.0" text="Журнал посещений" textFill="#a3c7d4">
+                <Button fx:id="ButtonVisits" layoutX="93.0" layoutY="347.0" mnemonicParsing="false" onAction="#buttonVisits" prefHeight="82.0" prefWidth="469.0" text="Журнал посещений" textFill="#a3c7d4">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="System Bold" size="39.0" />
                </font></Button>
             </children>
         </AnchorPane>
