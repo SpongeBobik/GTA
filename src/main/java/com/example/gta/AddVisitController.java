@@ -22,7 +22,7 @@ public class AddVisitController {
 
     public void addVisit (ActionEvent actionEvent){
 
-            try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov")) {
+            try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS")) {
                 Statement statement = con.createStatement();
                 int row = statement.executeUpdate("INSERT INTO \"Visits\"(\"Card_ID\", \"Date\") VALUES ('" + txtCard.getText() + "','" + txtData.getText() + "')");
             }catch(SQLException throwables){

@@ -27,7 +27,7 @@ public class DeleteSaleController {
     @FXML
     void deleteSaleMethod(ActionEvent actionEvent) {
         try {
-            Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov");
+            Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS");
             Statement statement = con.createStatement();
 
             int rows = statement.executeUpdate("DELETE FROM \"Sale_Services\" WHERE \"ID_Card\" = " + EditDelete.ID_Card + "");

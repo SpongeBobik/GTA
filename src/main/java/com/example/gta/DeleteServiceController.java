@@ -29,7 +29,7 @@ public class DeleteServiceController {
     @FXML
     void deleteServiceMethod(ActionEvent actionEvent) {
         try {
-            Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov");
+            Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS");
             Statement statement = con.createStatement();
 
             int rows = statement.executeUpdate("DELETE FROM \"Services\" WHERE \"ID_Service\" = " + EditDelete.ID_Service + "");

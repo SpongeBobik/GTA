@@ -44,7 +44,7 @@ public class UpdateClientController implements Initializable {
     public void buttonUpdate(ActionEvent actionEvent){
 
 
-        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov")) {
+        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS")) {
             Statement statement = con.createStatement();
             int row = statement.executeUpdate("UPDATE \"Clients\" SET \"FIO\"='"+ txtBoxNameClient.getText() +"', \"Phone\"='"+ txtBoxPhoneClient.getText() +"', \"e_mail\"='"+ txtBoxMailClient.getText() +"', \"Status\"='"+ chboxStatus.getValue() +"' WHERE \"ID_Client\" ="+ EditDelete.idClient+ ";");
         }catch(SQLException throwables){

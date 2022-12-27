@@ -8,8 +8,8 @@ public class DBConnect {
 
     private static Connection conn;
     private static String url = "jdbc:postgresql://46.229.214.241:5432/Kulikov";
-    private static String username = "kulikov";
-    private static String password = "kulikov";
+    private static String username = "PKS";
+    private static String password = "PKS";
 
     public static Connection connect() throws SQLException {
         conn = DriverManager.getConnection(url, username, password);

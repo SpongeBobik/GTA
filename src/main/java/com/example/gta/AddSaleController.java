@@ -30,7 +30,7 @@ public class AddSaleController {
 
     public void addSale (ActionEvent actionEvent){
 
-        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov")) {
+        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS")) {
             Statement statement = con.createStatement();
             int row = statement.executeUpdate("INSERT INTO \"Sale_Services\"(\"Service_ID\", \"Duration\", \"Client_ID\", \"Col_Visits\", \"Cost\") VALUES ('" + txtboxService.getText() + "','" + txtboxDur.getText() + "','" + txtboxClient.getText() + "','" +txtboxCol.getText()+ "','" + txtboxCost.getText()+ "')");
         }catch(SQLException throwables){

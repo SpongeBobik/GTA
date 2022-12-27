@@ -40,7 +40,7 @@ public class DeleteClientController {
     @FXML
     void deleteClientMethod(ActionEvent actionEvent) {
         try {
-            Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov");
+            Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS");
             Statement statement = con.createStatement();
 
             int rows = statement.executeUpdate("DELETE FROM \"Clients\" WHERE \"ID_Client\" = " + EditDelete.idClient + "");

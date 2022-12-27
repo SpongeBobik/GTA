@@ -40,7 +40,7 @@ public class AddClientController {
         getcomboStatus();
     }
     public void getcomboStatus(){
-        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov")) {
+        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS")) {
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery("SELECT * from \"Status\"");
             while(rs.next()){
@@ -82,7 +82,7 @@ public class AddClientController {
         String idStatus = id_list.get(Integer.parseInt(str));
 
 
-        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov")) {
+        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS")) {
             Statement statement = con.createStatement();
             int row = statement.executeUpdate("INSERT INTO \"Clients\"(\"FIO\", \"Phone\", \"e_mail\", \"Status\") VALUES ('" + txtBoxNameClient.getText() + "','" + txtBoxPhoneClient.getText() + "','" + txtBoxMailClient.getText() + "','" + idStatus + "')");
         }catch(SQLException throwables){

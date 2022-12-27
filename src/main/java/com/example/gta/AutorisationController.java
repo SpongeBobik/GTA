@@ -34,7 +34,7 @@ public class AutorisationController {
     public void Enter(){
 
         try {
-            Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov");
+            Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS");
 
             ResultSet rs = con.createStatement().executeQuery("SELECT \"Password\" from \"Autorisation\" WHERE \"Login\"='"+ txtLogin.getText() +"'");
 

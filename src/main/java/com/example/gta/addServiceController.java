@@ -46,7 +46,7 @@ public class addServiceController implements Initializable {
 
     public void buttonAdd(ActionEvent actionEvent){
 
-        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "kulikov", "kulikov")) {
+        try(Connection con = DriverManager.getConnection("jdbc:postgresql://46.229.214.241:5432/Kulikov", "PKS", "PKS")) {
             Statement statement = con.createStatement();
             int row = statement.executeUpdate("INSERT INTO \"Services\"(\"Name_Service\", \"Group_Lessons\", \"Pool\", \"Fight_lessons\", \"Massage\", \"Spa\") VALUES ('" + txtboxNameServ.getText() + "','" + chboxGroup.getValue().toString() + "','" + chboxPool.getValue().toString() + "','" + chboxFight.getValue().toString() + "','"+ chboxMassage.getValue().toString() + "','" + chboxSpa.getValue().toString() + "')");
         }catch(SQLException throwables){

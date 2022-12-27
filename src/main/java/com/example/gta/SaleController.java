@@ -156,7 +156,6 @@ public class SaleController {
         EditDelete.Col_Visits = nom.get(4).toString();
         EditDelete.Cost = nom.get(5).toString();
 
-//
 //        System.out.println(EditDelete.ID_Card);
 //        System.out.println(EditDelete.Service_ID);
 //        System.out.println(EditDelete.Duration);
@@ -166,4 +165,6 @@ public class SaleController {
 
     }
 
+
 }
+
